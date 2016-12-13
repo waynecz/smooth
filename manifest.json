@@ -1,0 +1,10 @@
+{
+  "name": "lib",
+  "content": {
+    "../node_modules/.npminstall/vue/2.0.8/vue/dist/vue.js": 1,
+    "../node_modules/.npminstall/vue-router/2.0.3/vue-router/dist/vue-router.js": 2,
+    "../node_modules/.npminstall/jquery/3.1.1/jquery/dist/jquery.min.js": 3,
+    "../node_modules/.npminstall/webpack/1.13.3/webpack/buildin/amd-options.js": 4,
+    "../node_modules/.npminstall/js-cookie/2.1.3/js-cookie/src/js.cookie.js": 5
+  }
+}

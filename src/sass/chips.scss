@@ -1,0 +1,39 @@
+$pr: #33a1ce;
+$em: #4bc1a5;
+$ig: #95aeba;
+$ex: #ec407a;
+
+$ma: #3a3a59;
+$bl: #20a0ff;
+$bl-1: #33a1ce;
+$bl-2: #0094e2;
+$rd: #f03946;
+$lv: #46d469;
+$lv-1: #4bc1a5;
+
+$wt: #fff;
+$wt-1: #fafafa;
+$wt-2: #fefefe;
+
+$gr: #eee;
+$gr-1: #ddd;
+$gr-2: #ccc;
+$gr-3: #aaa;
+
+$ye: #e4c946;
+$ye-7: #fffbe6;
+$or: #f0a855;
+
+.shadow {
+    display: none !important;
+}
+
+.justify {
+    text-align: justify;
+    &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+}

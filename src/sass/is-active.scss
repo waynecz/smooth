@@ -1,0 +1,26 @@
+.active {
+    /* Menu
+ -------------------------- */
+    &.menu {
+        &__unit {
+            position: relative;
+            background: #eee;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px $gr inset;
+            z-index: 2;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                width: 0;
+                height: 0;
+                border: 8px solid transparent;
+                border-bottom-color: $wt;
+                border-bottom-width: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                filter: drop-shadow(0 -1px 0 $gr-1);
+            }
+        }
+    }
+}
