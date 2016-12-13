@@ -7,6 +7,6 @@
 *.iml
 out
 gen
-/node_module
+/node_modules
 *.log
 /log
