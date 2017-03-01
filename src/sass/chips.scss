@@ -1,0 +1,14 @@
+// 这里写一些零散的工具样式
+.shadow {
+    display: none !important;
+}
+
+.justify {
+    text-align: justify;
+    &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+}

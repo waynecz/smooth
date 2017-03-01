@@ -1,0 +1,20 @@
+@keyframes SHINK {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #fff;
+    }
+    51% {
+        color: transparent;
+    }
+    99% {
+        color: transparent;
+    }
+    100% {
+        color: #fff;
+    }
+}
+.SHINK {
+    animation: SHINK 1s linear infinite;
+}

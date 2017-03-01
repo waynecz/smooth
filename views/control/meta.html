@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN-HANS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script>
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth;
+                clientWidth <= 800
+                        ? document.documentElement.style.fontSize = (clientWidth / 20) + 'px'
+                        : document.documentElement.style.fontSize = 16 + 'px';
+            }
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b);
+                b = setTimeout(a, 300)
+            }, !1);
+            a();
+        }(window);
+    </script>
+    <title>{{title}}</title>
+</head>
