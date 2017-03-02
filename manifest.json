@@ -1,15 +1,15 @@
 {
   "name": "lib",
   "content": {
-    "../node_modules/.npminstall/axios/0.15.3/axios/dist/axios.min.js": {
+    "../node_modules/.npminstall/axios/0.15.3/axios/dist/axios.js": {
       "id": 0,
       "meta": {}
     },
-    "../node_modules/.npminstall/vue-router/2.3.0/vue-router/dist/vue-router.min.js": {
+    "../node_modules/.npminstall/vue-router/2.3.0/vue-router/dist/vue-router.js": {
       "id": 1,
       "meta": {}
     },
-    "../node_modules/.npminstall/vue/2.2.1/vue/dist/vue.min.js": {
+    "../node_modules/.npminstall/vue/2.2.1/vue/dist/vue.js": {
       "id": 2,
       "meta": {}
     },

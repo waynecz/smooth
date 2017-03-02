@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import 'babel-polyfill'
 import router from './router'
+import smooth from './plugins'
+
+Vue.use(smooth);
 
 const app = new Vue({
     router

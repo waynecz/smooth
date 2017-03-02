@@ -14,7 +14,8 @@ module.exports = (gulp, common, path) => {
                 resolvePath('./app.js'),
                 resolvePath('./bin/www'),
                 resolvePath('./views/**/*.html'),
-                resolvePath('./utils/*.js')
+                resolvePath('./utils/*.js'),
+                resolvePath('./mock/**')
             ],
             gulp.parallel('reload')
         );

@@ -8,4 +8,6 @@ router.get('/',  (req, res, next) => {
 	});
 });
 
+router.use('/ajax', require('./ajax'));
+
 module.exports = router;

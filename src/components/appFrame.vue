@@ -1,18 +1,6 @@
 <template>
-    <div class="app" layout="column center-left">
-
-        <header class="app__system-bar" layout="row center-justify">
-            <div class="app__portrait"></div>
-            <div class="app__logo-box">
-                <div class="app__logo">ns
-                </div>
-            </div>
-            <div class="app__system-select" self="right">
-            </div>
-        </header>
-        <section class="app__content" layout="row">
-            <router-view></router-view>
-        </section>
+    <div class="app" layout="column center-center">
+        <h1>Smooth</h1>
     </div>
 </template>
 
@@ -20,15 +8,37 @@
 
     export default{
         data () {
-            return {
-
-            }
+            return {}
         },
         mounted () {
+            this.api.sample()
         },
     }
 </script>
 
 <style lang="scss">
     @import "../sass/index.scss";
+
+    .app {
+        height: 100vh;
+        background: #41b883;
+        box-shadow: 0 0 0 20px #35495e inset;
+    }
+
+    h1 {
+        font-size: 80px;
+        color: #f6f6f6;
+        text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+    }
 </style>

@@ -5,50 +5,36 @@ const ExtractTextPlugin    = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin    = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const rules = conf.rules;
+
+Object.assign(rules[0].options, {
+    loaders: {
+        css: ['vue-style-loader', 'css-loader'],
+        postcss: ['vue-style-loader', 'css-loader'],
+        less: ['vue-style-loader', 'css-loader', 'less-loader'],
+        sass: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'],
+        scss: ExtractTextPlugin.extract({
+            use: ['css-loader', 'sass-loader'],
+            fallback: 'vue-style-loader'
+        }),
+    },
+    postcss: [
+        require('autoprefixer')({
+            browsers: ["Android 4.1", "iOS 7.1", "Chrome > 31", "ff > 31", "ie >= 9"]
+        })
+    ]
+});
+
 module.exports = {
-    entry: conf.entry,
+    entry: {
+        bundle: [conf.entry]
+    },
     output: {
         path: conf.bundlePath,
-        filename: 'bundle.js',
+        filename: '[name].js',
     },
     module: {
-        rules: [
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        css: ['vue-style-loader', 'css-loader'],
-                        postcss: ['vue-style-loader', 'css-loader'],
-                        less: ['vue-style-loader', 'css-loader', 'less-loader'],
-                        sass: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'],
-                        scss: ['vue-style-loader', 'css-loader', 'sass-loader']
-                    },
-                    postcss: [
-                        require('autoprefixer')({
-                            browsers: ['last 2 versions']
-                        })
-                    ]
-                }
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                query: {
-                    limit: 10000,
-                    name: 'imgs/[name].[ext]?[hash]'
-                }
-            },
-            {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-            }
-        ]
+        rules: rules
     },
     resolve: {
         alias: conf.proPackage
@@ -64,7 +50,7 @@ module.exports = {
             manifest: require('./../manifest.json')
         }),
         new ExtractTextPlugin({
-            filename: './css/style.[contenthash].css'
+            filename: '../css/style.[chunkhash].css'
         }),
         new OptimizeCSSPlugin(),
         // new BundleAnalyzerPlugin()
