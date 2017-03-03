@@ -1,11 +1,10 @@
 const path    = require('path'),
       webpack = require('webpack');
 const conf    = require('./config');
-// const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
     entry: {
-        bundle: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', conf.entry],
+        app: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', conf.entry],
     },
     output: {
         path: '/',
@@ -28,7 +27,6 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        // new FriendlyErrorsWebpackPlugin(),
     ],
     devtool: '#eval-source-map',
 };

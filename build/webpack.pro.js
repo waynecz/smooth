@@ -27,7 +27,7 @@ Object.assign(rules[0].options, {
 
 module.exports = {
     entry: {
-        bundle: [conf.entry]
+        app: [conf.entry]
     },
     output: {
         path: conf.bundlePath,

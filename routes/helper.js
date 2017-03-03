@@ -31,7 +31,7 @@ const transfer = (router, comeList) => {
             axios(config).then(data => {
                 handler(req, res, next, data)
             }).catch(err => {
-                res.json({message: 'N出错了'})
+                res.json({message: '出错了'})
             })
         }));
     };

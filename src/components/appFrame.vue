@@ -11,8 +11,24 @@
             return {}
         },
         mounted () {
-            this.api.sample()
+            this.sample()
         },
+        methods: {
+            async sample () {
+                await this.api.sample();
+                await this.sleep(2);
+                await this.api.sample();
+                await this.sleep(3);
+                await this.api.sample();
+            },
+            sleep (t) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve()
+                    }, t * 1000);
+                })
+            }
+        }
     }
 </script>
 
