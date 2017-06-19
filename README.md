@@ -1,6 +1,8 @@
-# Smooth with Vue2 & webpack2 & express
+# Smooth with Vue2 & webpack2 & express(koa2)
 
 <img src="./public/imgs/smooth.png" />
+
+###[koa版本](https://github.com/waynecz/smooth/tree/koa)
 
 ### 当前已有
 + gulp结构化
