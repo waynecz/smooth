@@ -1,7 +1,7 @@
 {
   "apps": [{
     "name": "wayne",
-    "script": "bin/www",
+    "script": "koa",
     "instances": 1,
     "max_memory_restart": "256M",
     "autorestart": true,
