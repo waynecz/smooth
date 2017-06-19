@@ -1,0 +1,9 @@
+// 这里写具体应用的结构样式，类似app的架构
+body {
+    @include res('m') {
+        width: 100%;
+        padding: .4rem .6rem!important;
+        overflow-x: hidden;
+        overflow-y: scroll!important;
+    }
+}

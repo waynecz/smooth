@@ -1,0 +1,39 @@
+$breakpoints: (
+        'm' : (max-width: 830px),
+        'x' : (max-width: 1200px),
+        'p' : (min-width: 831px),
+);
+
+// 打断点的快捷写法，调用参考common.scss里的
+@mixin res($name) {
+    // 循环断点Map，如果存在则返回
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "没有这个断点哦 `#{$breakpoint}`。";
+    }
+}
+
+// 移动端设计稿宽度，单位px
+$disgnDraftWidth: 750;
+
+// 作响应式的时候根据设计稿得出元素具体rem大小，比如一个元素在设计稿中宽度是200px，那么他的真实宽度就是 @include r(300px)
+@function r($n) {
+    @return ($n / $disgnDraftWidth) * 20 + rem;
+}
+
+@function t($time) {
+    @return $time +s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin ty {
+    transform: translateY(-50%);
+}
+
+@mixin ts {
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

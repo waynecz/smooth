@@ -1,0 +1,17 @@
+// 这里写一些零散的工具样式
+
+
+.shadow {
+    display: none !important;
+}
+
+// 多行均匀分布布局用，效果类似justify-content: space-between
+.justify {
+    text-align: justify;
+    &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+}

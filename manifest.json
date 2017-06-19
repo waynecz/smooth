@@ -1,0 +1,25 @@
+{
+  "name": "lib",
+  "content": {
+    "../node_modules/.npminstall/axios/0.15.3/axios/dist/axios.js": {
+      "id": 0,
+      "meta": {}
+    },
+    "../node_modules/.npminstall/vue-router/2.3.0/vue-router/dist/vue-router.js": {
+      "id": 1,
+      "meta": {}
+    },
+    "../node_modules/.npminstall/vue/2.2.1/vue/dist/vue.js": {
+      "id": 2,
+      "meta": {}
+    },
+    "../node_modules/.npminstall/process/0.11.9/process/browser.js": {
+      "id": 3,
+      "meta": {}
+    },
+    "../node_modules/.npminstall/webpack/2.2.1/webpack/buildin/global.js": {
+      "id": 4,
+      "meta": {}
+    }
+  }
+}
