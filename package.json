@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "pm2 start dev.pm2.json & gulp dev & webpack --config ./build/webpack.dll.dev.js",
-    "build": "webpack --config ./build/webpack.pro.js & webpack --config ./build/webpack.dll.pro.js & gulp p"
+    "build": "webpack --config ./build/webpack.pro.js && gulp p"
   },
   "dependencies": {
     "art-template": "^4.11.0",

@@ -25,7 +25,7 @@ Object.assign(rules[0].options, {
     ]
 });
 
-module.exports = {
+module.exports = [{
     entry: {
         app: [conf.entry]
     },
@@ -57,4 +57,4 @@ module.exports = {
         // 如果要启用分析请打开上面的注释
     ],
     devtool: false,
-};
+}, require('./webpack.dll.pro')];
